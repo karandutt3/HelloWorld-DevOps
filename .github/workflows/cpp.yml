@@ -1,0 +1,28 @@
+name: C++ CI (Visual Studio + GTest)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1.3.1
+
+    - name: Restore NuGet packages
+      run: nuget restore HelloWorld/HelloWorld.sln
+
+    - name: Build solution (x64 Release)
+      run: msbuild HelloWorld/HelloWorld.sln /p:Configuration=Release /p:Platform=x64
+
+    - name: Run unit tests
+      run: .\UnitTestHelloWorld\x64\Release\UnitTestHelloWorld.exe
+
