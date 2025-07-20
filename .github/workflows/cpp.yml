@@ -21,7 +21,7 @@ jobs:
       run: nuget restore HelloWorld.sln
 
     - name: Build solution (x64 Release)
-      run: msbuild HelloWorld.sln /p:Configuration=Release /p:Platform=x64
+      run: msbuild HelloWorld\HelloWorld.sln /p:Configuration=Release /p:Platform=x64
 
     - name: Run unit tests
       run: .\UnitTestHelloWorld\x64\Release\UnitTestHelloWorld.exe
