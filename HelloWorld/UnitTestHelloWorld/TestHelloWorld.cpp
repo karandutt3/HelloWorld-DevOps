@@ -25,7 +25,7 @@ namespace UnitTestHelloWorld
     TEST_F(HelloWorldTest, SayHelloPrintsHelloWorld) {
         hello.sayHello();
         std::string output = out.str();
-        EXPECT_NE(output.find("Hello HelloWorld class!"), std::string::npos);
+        EXPECT_NE(output.find("Hello from HelloWorld class!"), std::string::npos);
     }
 
     TEST_F(HelloWorldTest, SayGoodbyePrintsGoodbyeWorld) {
