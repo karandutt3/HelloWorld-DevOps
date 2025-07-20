@@ -18,10 +18,10 @@ jobs:
       uses: microsoft/setup-msbuild@v1.3.1
 
     - name: Restore NuGet packages
-      run: nuget restore HelloWorld.sln
+      run: nuget restore HelloWorld/HelloWorld.sln
 
     - name: Build solution (x64 Release)
-      run: msbuild HelloWorld\HelloWorld.sln /p:Configuration=Release /p:Platform=x64
+      run: msbuild HelloWorld/HelloWorld.sln /p:Configuration=Release /p:Platform=x64
 
     - name: Run unit tests
       run: .\UnitTestHelloWorld\x64\Release\UnitTestHelloWorld.exe
