@@ -58,13 +58,13 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>E:\Assignment\Demo-HelloWorld-DevOps\HelloWorld-DevOps\HelloWorld\HelloWorld;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\HelloWorld;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeaderOutputFile />
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>E:\Assignment\Demo-HelloWorld-DevOps\HelloWorld-DevOps\HelloWorld\x64\Debug\HelloWorld.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\x64\$(Configuration)\HelloWorld.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -92,7 +92,7 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>E:\Assignment\Demo-HelloWorld-DevOps\HelloWorld-DevOps\HelloWorld\HelloWorld;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\HelloWorld;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeaderOutputFile />
     </ClCompile>
     <Link>
@@ -100,7 +100,7 @@
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <AdditionalDependencies>E:\Assignment\Demo-HelloWorld-DevOps\HelloWorld-DevOps\HelloWorld\x64\Debug\HelloWorld.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\x64\$(Configuration)\HelloWorld.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
